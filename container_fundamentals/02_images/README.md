@@ -63,3 +63,27 @@ In this training, you will learn how to manage images.
   >At this time, the docker image will be removed as there is no running container associated to this image.
 
   [Jump to Home](../README.md) | [Previous Training](../01_hello-docker/README.md) | [Next Training](../03_container-lifecycle/README.md)
+
+
+
+## Commands executed
+
+```
+   33  docker pull nginx
+   34  docker images
+   35  ## Commands executed
+   36  docker run -d nginx
+   37  docker ps
+   38  docker ps
+   39  docker rmi nginx
+   40  docker rm -f $(docker ps -qa)
+   41  docker ps
+   42  docker run -d -p 80:80 nginx
+   43  docker ps
+   44  docker ps
+   45  docker exec trusting_spence bash
+   46  docker exec -it trusting_spence bash
+   47  docker ps
+   48  docker rm -f $(docker ps -qa)
+
+```

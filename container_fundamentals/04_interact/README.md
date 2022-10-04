@@ -37,3 +37,17 @@ In this training, you will learn how to interact with a container.
   ```
 
 [Jump to Home](../README.md) | [Previous Training](../03_container-lifecycle/README.md) | [Next Training](../05_layers/README.md)
+
+
+## Commands executed
+
+```
+   75  docker run -it -d --name my-busybox busybox:1.32.0 sh -c "while true; do $(echo date); sleep 1; done"
+   76  docker exec -it my-busybox sh
+      0 ps
+      1 ps aux
+      2 printenv
+      3 history
+   77  docker rm -f my-busybox
+
+```

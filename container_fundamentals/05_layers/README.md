@@ -96,3 +96,23 @@ tar ztvf /tmp/nginx-image-layers/31b3f1ad4ce1f369084d0f959813c51df0ca17d9877d5ee
 ```
 
 [Jump to Home](../README.md) | [Previous Training](../04_interact/README.md) | [Next Training](../06_build-images-interactive/README.md)
+
+
+## Commands executed
+
+For increased security when pulling and running containers, one can use RepoDigests (e.g. docker pull nginx@sha256:<sha> - retrieved from docker inspect img | grep RepoDigests) - this way you know for sure which image is pulled because one can be tricked to use malicious repo img.
+
+```
+   79  docker pull debian:10.5
+   80  docker history debian:10.5
+   81  docker inspect debian:10.5
+   82  docker inspect debian:10.5 | grep Cmd --after-context=10
+   83  docker inspect debian:10.5 | grep User --before-context=10
+   84  docker inspect debian:10.5 | grep Id
+   85  docker inspect debian:10.5 | grep digest
+   86  docker inspect debian:10.5 | grep Image
+   87  docker inspect debian:10.5
+   88  docker inspect debian:10.5 | grep RepoDigests
+   89  docker inspect debian:10.5 | grep RepoDigests --after-context=5
+   90  docker rm -f $(docker ps -qa)
+```

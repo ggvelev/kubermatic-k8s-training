@@ -169,3 +169,29 @@ docker rm -f $(docker ps -qa)
 ```
 
 [Jump to Home](../README.md) | [Previous Training](../02_images/README.md) | [Next Training](../04_interact/README.md)
+
+
+## Commands executed
+
+```
+ 53  docker run -d --name my-nginx nginx:1.23.1~
+   54  docker run -d --name my-nginx nginx:1.23.1
+   55  docker inspect my-nginx | jq '.[].State'
+   56  docker inspect my-nginx | grep '.[].State'
+   57  docker inspect my-nginx | grep 'State'
+   58  docker inspect my-nginx
+   59  docker ps -a
+   60  docker ps
+   61  docker rm my-nginx
+   62  docker rm -f my-nginx
+   63  docker run -it --name my-busybox busybox:1.32.0 sh -c "while true; do $(echo date); sleep 1; done"
+   64  docker ps -a
+   65  docker ps
+   66  docker ps -a
+   67  docker attach my-busybox
+   68  docker start my-busybox
+   69  docker attach my-busybox
+   70  docker ps
+   71  docker ps -a
+   72  docker rm -f my-busybox
+```

@@ -95,3 +95,20 @@ In this task, you will create a new image via interactive commands.
   ```
 
 [Jump to Home](../README.md) | [Previous Training](../05_layers/README.md) | [Next Training](../07_dockerfile/README.md)
+
+
+## Commands executed
+
+Not a good practice to build images interactively, only for local testing!
+For prod use cases always use dockerfiles.
+
+```
+   95  docker ps -a
+   96  docker run -it --name my-debian debian:10.5
+   97  docker diff my-debian
+   98  docker commit my-debian
+   99  docker run -it sha256:f3d1650a0f878c473e05a1ee0aa821022e7dfd7066c1ef8cb4344e1eb44ed89c
+  100  docker tag sha256:f3d1650a0f878c473e05a1ee0aa821022e7dfd7066c1ef8cb4344e1eb44ed89c my-image-vlv
+  101  docker images
+  102  docker rm -f $(docker ps -qa)
+```

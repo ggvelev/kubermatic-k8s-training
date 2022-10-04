@@ -71,3 +71,20 @@ podman rm <Container-ID>
 ```
 
 [Jump to Home](../README.md) | [Next Training](../02_images/README.md)
+
+
+## Commands executed
+
+```
+23  docker run -it -p :80:80 ubuntu:22.04
+        apt update && apt install -y apache2
+        apache2ctl --DFOREGROUND
+        // it works hehe :)
+24  dockerps
+25  docker ps
+26  docker ps
+27  docker ps -a
+28  docker rm -f interesting_robinson
+29  docker ps -a
+30  docker ps -aq
+```
